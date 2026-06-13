@@ -141,41 +141,14 @@ No camera, microphone, location, or contact permissions used.
 
 ---
 
-## Build & Sign for Release
-
-```bash
-# 1. Generate keystore (once)
-keytool -genkey -v -keystore mobileguard.jks \
-  -keyalg RSA -keysize 2048 -validity 10000 \
-  -alias mobileguard
-
-# 2. Configure local.properties
-echo "KEYSTORE_PATH=/path/to/mobileguard.jks" >> local.properties
-echo "KEYSTORE_PASS=yourpassword" >> local.properties
-echo "KEY_ALIAS=mobileguard" >> local.properties
-echo "KEY_PASS=yourkeypassword" >> local.properties
-
-# 3. Build release AAB (recommended for Play Store)
-./gradlew bundleRelease
-
-# 4. Output location
-# app/build/outputs/bundle/release/app-release.aab
-```
 
 ## Privacy Policy Requirements (mandatory for VPN apps)
 
-Google requires a privacy policy URL for VPN apps. Key statements to include:
 
 1. **No traffic inspection**: MobileGuard only intercepts DNS queries (domain names), never URL paths, payload content, or encrypted data.
 2. **No data collection**: No DNS queries, no usage analytics, no personal data is transmitted to any server.
 3. **Local-only processing**: All AI detection runs on-device. The forensic log is stored encrypted on-device only.
 4. **VPN permission usage**: Solely used to create a local DNS filter tunnel, not for privacy circumvention.
 
-Host at: `https://yourdomain.com/mobileguard-privacy-policy`
 
-## Play Store App Review Tips
 
-- **VPN apps require a Declaration Form** in the Play Console → Policy → VPN policy
-- State: "This app uses the VPN permission solely to filter DNS queries on the local device for security purposes. It does not route traffic to external servers or provide anonymization services."
-- Upload 2-7 screenshots, a 512×512 icon, and a 1024×500 feature graphic
-- Set `android:allowBackup="false"` in the manifest (recommended for security apps)
