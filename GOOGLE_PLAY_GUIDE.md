@@ -134,11 +134,6 @@ No camera, microphone, location, or contact permissions used.
 - Remove all ads
 - Priority blocklist updates
 
-### Estimated Revenue (100K DAU)
-- Free 80% → AdMob: ~$2-4 CPM, 3 impressions/day = ~$50-100/day
-- Premium 5% (5,000 users × €2.99/month) = ~$14,950/month
-- **Total realistic: $20-30K/month at 100K DAU**
-
 ---
 
 
