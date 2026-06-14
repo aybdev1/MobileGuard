@@ -113,16 +113,6 @@ No camera, microphone, location, or contact permissions used.
 
 ---
 
-## Revenue Strategy
-
-### Free Tier (default)
-- Full DNS blocking
-- 1 detection model (DCL)
-- Basic analytics
-- Network scanner
-- In-app AdMob banners (320×50 in Quick Access area)
-- Interstitials on: VPN start, every 4th navigation, every 10 threats
-
 ### Premium Tier — €2.99/month or €19.99/year (Google Play Billing)
 - All 4 AI detection models
 - Advanced Analytics (24h charts, risk heatmap, app insight)
